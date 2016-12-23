@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/IssueService" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IssueService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/IssueService" location="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="basicHttpIssueService" type="i0:IssueService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IssueUpdateBusinessPrio">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/IssueUpdateBusinessPrio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssueSetUpdatePrioIfNotChanged">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/IssueSetUpdatePrioIfNotChanged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IssueChangeMastershipSite">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/IssueChangeMastershipSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueListByModifyDate">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/GetIssueListByModifyDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueListByProjectAndModifyDate">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/GetIssueListByProjectAndModifyDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneIssue">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/GetOneIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneIssueComplete">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/GetOneIssueComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueForShiroyagiJira">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/GetIssueForShiroyagiJira" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetShowStoppersByProject">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/GetShowStoppersByProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitIssue">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/SubmitIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitIssueDirect">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/SubmitIssueDirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIssue">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/UpdateIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveries">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/GetDeliveries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStakeHolderEntitiesByIssueId">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/GetStakeHolderEntitiesByIssueId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTeamFinderLink">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/GetTeamFinderLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueByExternalReferenceIssueId">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/GetIssueByExternalReferenceIssueId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIssueByAction">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/UpdateIssueByAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIssueByActionDirect">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/UpdateIssueByActionDirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDeliveryDirect">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/SubmitDeliveryDirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeliveryDirect">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/UpdateDeliveryDirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CloneDupInfoToMasterIssue">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/CloneDupInfoToMasterIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyDupSHToMasterIssue">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/ModifyDupSHToMasterIssue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="IMSeGeneralFaultArgumentsFault">
+        <soap:fault use="literal" name="IMSeGeneralFaultArgumentsFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IssueSetPrioFlag">
+      <soap:operation soapAction="http://tempuri.org/IssueService/IssueService/IssueSetPrioFlag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IssueService">
+    <wsdl:port name="basicHttpIssueService" binding="tns:basicHttpIssueService">
+      <soap:address location="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc/IssueService_basic" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

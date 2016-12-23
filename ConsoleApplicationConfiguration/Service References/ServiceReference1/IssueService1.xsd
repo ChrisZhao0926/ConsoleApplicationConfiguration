@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/IssueService" elementFormDefault="qualified" targetNamespace="http://tempuri.org/IssueService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" />
+  <xs:import schemaLocation="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common" />
+  <xs:element name="IssueUpdateBusinessPrio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessPrio" type="xs:int" />
+        <xs:element minOccurs="0" name="lastModifyDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueUpdateBusinessPrioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="IssueUpdateBusinessPrioResult" nillable="true" type="q1:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueSetUpdatePrioIfNotChanged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastModifyDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueSetUpdatePrioIfNotChangedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="IssueSetUpdatePrioIfNotChangedResult" nillable="true" type="q2:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueChangeMastershipSite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transferToMastershipSite" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueChangeMastershipSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="IssueChangeMastershipSiteResult" nillable="true" type="q3:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIssueListByModifyDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common" minOccurs="0" name="dataDetailLevel" type="q4:Enums.DMSDataDetailLevel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIssueListByModifyDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="GetIssueListByModifyDateResult" nillable="true" type="q5:ArrayOfIssueEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIssueListByProjectAndModifyDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="projectName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common" minOccurs="0" name="dataDetailLevel" type="q6:Enums.DMSDataDetailLevel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIssueListByProjectAndModifyDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="GetIssueListByProjectAndModifyDateResult" nillable="true" type="q7:ArrayOfIssueEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOneIssue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataFetchLevel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataDetailLevel" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOneIssueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="GetOneIssueResult" nillable="true" type="q8:IssueEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOneIssueComplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataFetchLevel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataDetailLevel" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOneIssueCompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="GetOneIssueCompleteResult" nillable="true" type="q9:IssueEntityComplete" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIssueForShiroyagiJira">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dmsId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="externalReference" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="externalrefid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIssueForShiroyagiJiraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="GetIssueForShiroyagiJiraResult" nillable="true" type="q10:ArrayOfIssueEntityComplete" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShowStoppersByProject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="projectName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShowStoppersByProjectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="GetShowStoppersByProjectResult" nillable="true" type="q11:ArrayOfIssueEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitIssue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="issue" nillable="true" type="q12:IssueEntityComplete" />
+        <xs:element minOccurs="0" name="semcId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitIssueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="SubmitIssueResult" nillable="true" type="q13:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitIssueDirect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="issue" nillable="true" type="q14:IssueEntityComplete" />
+        <xs:element minOccurs="0" name="semcId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitIssueDirectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="SubmitIssueDirectResult" nillable="true" type="q15:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIssue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="issue" nillable="true" type="q16:IssueEntityComplete" />
+        <xs:element minOccurs="0" name="semcId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIssueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="UpdateIssueResult" nillable="true" type="q17:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeliveries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issueId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeliveriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="GetDeliveriesResult" nillable="true" type="q18:ArrayOfDeliveryEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStakeHolderEntitiesByIssueId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issueId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStakeHolderEntitiesByIssueIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="GetStakeHolderEntitiesByIssueIdResult" nillable="true" type="q19:ArrayOfStakeHolderEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTeamFinderLink">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTeamFinderLinkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTeamFinderLinkResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIssueByExternalReferenceIssueId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="externalReference" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="externalIssue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIssueByExternalReferenceIssueIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="GetIssueByExternalReferenceIssueIdResult" nillable="true" type="q20:IssueEntityComplete" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIssueByAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="issue" nillable="true" type="q21:IssueEntityComplete" />
+        <xs:element minOccurs="0" name="semcId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIssueByActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="UpdateIssueByActionResult" nillable="true" type="q22:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIssueByActionDirect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="issue" nillable="true" type="q23:IssueEntityComplete" />
+        <xs:element minOccurs="0" name="semcId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIssueByActionDirectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="UpdateIssueByActionDirectResult" nillable="true" type="q24:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitDeliveryDirect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="delivery" nillable="true" type="q25:DeliveryEntity" />
+        <xs:element minOccurs="0" name="somcId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitDeliveryDirectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="SubmitDeliveryDirectResult" nillable="true" type="q26:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDeliveryDirect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="delivery" nillable="true" type="q27:DeliveryEntity" />
+        <xs:element minOccurs="0" name="somcId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDeliveryDirectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="UpdateDeliveryDirectResult" nillable="true" type="q28:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloneDupInfoToMasterIssue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="duplicateIssueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="masterIssueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="operatorType" type="xs:int" />
+        <xs:element minOccurs="0" name="site" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloneDupInfoToMasterIssueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="CloneDupInfoToMasterIssueResult" nillable="true" type="q29:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyDupSHToMasterIssue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="duplicateIssueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="masterIssueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="addStakeHolders" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="removeStakeHolders" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="site" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyDupSHToMasterIssueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="ModifyDupSHToMasterIssueResult" nillable="true" type="q30:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueSetPrioFlag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issueId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="site" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IssueSetPrioFlagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" minOccurs="0" name="IssueSetPrioFlagResult" nillable="true" type="q31:ActionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

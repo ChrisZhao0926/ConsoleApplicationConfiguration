@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/IssueService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/IssueService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/IssueService/Imports">
+      <xsd:import schemaLocation="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd0" namespace="http://tempuri.org/IssueService" />
+      <xsd:import schemaLocation="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.Entities" />
+      <xsd:import schemaLocation="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" />
+      <xsd:import schemaLocation="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IssueService_IssueUpdateBusinessPrio_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueUpdateBusinessPrio" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_IssueUpdateBusinessPrio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueUpdateBusinessPrioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_IssueSetUpdatePrioIfNotChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueSetUpdatePrioIfNotChanged" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_IssueSetUpdatePrioIfNotChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueSetUpdatePrioIfNotChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_IssueChangeMastershipSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueChangeMastershipSite" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_IssueChangeMastershipSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueChangeMastershipSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueListByModifyDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueListByModifyDate" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueListByModifyDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueListByModifyDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueListByModifyDate_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q1:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueListByProjectAndModifyDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueListByProjectAndModifyDate" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueListByProjectAndModifyDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueListByProjectAndModifyDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueListByProjectAndModifyDate_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q2:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetOneIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneIssue" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetOneIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetOneIssue_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q3:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetOneIssueComplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneIssueComplete" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetOneIssueComplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneIssueCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetOneIssueComplete_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q4:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueForShiroyagiJira_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueForShiroyagiJira" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueForShiroyagiJira_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueForShiroyagiJiraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueForShiroyagiJira_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q5:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetShowStoppersByProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowStoppersByProject" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetShowStoppersByProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowStoppersByProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetShowStoppersByProject_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q6:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_SubmitIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitIssue" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_SubmitIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_SubmitIssue_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q7:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_SubmitIssueDirect_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitIssueDirect" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_SubmitIssueDirect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitIssueDirectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_SubmitIssueDirect_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q8:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIssue" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateIssue_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q9:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetDeliveries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveries" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetDeliveries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetDeliveries_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q10:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetStakeHolderEntitiesByIssueId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStakeHolderEntitiesByIssueId" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetStakeHolderEntitiesByIssueId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStakeHolderEntitiesByIssueIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetStakeHolderEntitiesByIssueId_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q11:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetTeamFinderLink_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeamFinderLink" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetTeamFinderLink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTeamFinderLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetTeamFinderLink_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q12:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueByExternalReferenceIssueId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueByExternalReferenceIssueId" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueByExternalReferenceIssueId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIssueByExternalReferenceIssueIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_GetIssueByExternalReferenceIssueId_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q13:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateIssueByAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIssueByAction" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateIssueByAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIssueByActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateIssueByAction_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q14:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateIssueByActionDirect_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIssueByActionDirect" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateIssueByActionDirect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIssueByActionDirectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateIssueByActionDirect_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q15:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_SubmitDeliveryDirect_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitDeliveryDirect" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_SubmitDeliveryDirect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitDeliveryDirectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_SubmitDeliveryDirect_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q16:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateDeliveryDirect_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeliveryDirect" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateDeliveryDirect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeliveryDirectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_UpdateDeliveryDirect_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q17:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_CloneDupInfoToMasterIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloneDupInfoToMasterIssue" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_CloneDupInfoToMasterIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloneDupInfoToMasterIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_CloneDupInfoToMasterIssue_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q18:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_ModifyDupSHToMasterIssue_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyDupSHToMasterIssue" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_ModifyDupSHToMasterIssue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyDupSHToMasterIssueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_ModifyDupSHToMasterIssue_IMSeGeneralFaultArgumentsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common.ServiceArguments" name="detail" element="q19:IMSeGeneralFaultArguments" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_IssueSetPrioFlag_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueSetPrioFlag" />
+  </wsdl:message>
+  <wsdl:message name="IssueService_IssueSetPrioFlag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueSetPrioFlagResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IssueService">
+    <wsdl:operation name="IssueUpdateBusinessPrio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/IssueUpdateBusinessPrio" message="tns:IssueService_IssueUpdateBusinessPrio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/IssueUpdateBusinessPrioResponse" message="tns:IssueService_IssueUpdateBusinessPrio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueSetUpdatePrioIfNotChanged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/IssueSetUpdatePrioIfNotChanged" message="tns:IssueService_IssueSetUpdatePrioIfNotChanged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/IssueSetUpdatePrioIfNotChangedResponse" message="tns:IssueService_IssueSetUpdatePrioIfNotChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueChangeMastershipSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/IssueChangeMastershipSite" message="tns:IssueService_IssueChangeMastershipSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/IssueChangeMastershipSiteResponse" message="tns:IssueService_IssueChangeMastershipSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueListByModifyDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueListByModifyDate" message="tns:IssueService_GetIssueListByModifyDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueListByModifyDateResponse" message="tns:IssueService_GetIssueListByModifyDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueListByModifyDateIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_GetIssueListByModifyDate_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueListByProjectAndModifyDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueListByProjectAndModifyDate" message="tns:IssueService_GetIssueListByProjectAndModifyDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueListByProjectAndModifyDateResponse" message="tns:IssueService_GetIssueListByProjectAndModifyDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueListByProjectAndModifyDateIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_GetIssueListByProjectAndModifyDate_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOneIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/GetOneIssue" message="tns:IssueService_GetOneIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/GetOneIssueResponse" message="tns:IssueService_GetOneIssue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/GetOneIssueIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_GetOneIssue_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOneIssueComplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/GetOneIssueComplete" message="tns:IssueService_GetOneIssueComplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/GetOneIssueCompleteResponse" message="tns:IssueService_GetOneIssueComplete_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/GetOneIssueCompleteIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_GetOneIssueComplete_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueForShiroyagiJira">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueForShiroyagiJira" message="tns:IssueService_GetIssueForShiroyagiJira_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueForShiroyagiJiraResponse" message="tns:IssueService_GetIssueForShiroyagiJira_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueForShiroyagiJiraIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_GetIssueForShiroyagiJira_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShowStoppersByProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/GetShowStoppersByProject" message="tns:IssueService_GetShowStoppersByProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/GetShowStoppersByProjectResponse" message="tns:IssueService_GetShowStoppersByProject_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/GetShowStoppersByProjectIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_GetShowStoppersByProject_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/SubmitIssue" message="tns:IssueService_SubmitIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/SubmitIssueResponse" message="tns:IssueService_SubmitIssue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/SubmitIssueIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_SubmitIssue_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitIssueDirect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/SubmitIssueDirect" message="tns:IssueService_SubmitIssueDirect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/SubmitIssueDirectResponse" message="tns:IssueService_SubmitIssueDirect_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/SubmitIssueDirectIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_SubmitIssueDirect_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateIssue" message="tns:IssueService_UpdateIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateIssueResponse" message="tns:IssueService_UpdateIssue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateIssueIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_UpdateIssue_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/GetDeliveries" message="tns:IssueService_GetDeliveries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/GetDeliveriesResponse" message="tns:IssueService_GetDeliveries_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/GetDeliveriesIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_GetDeliveries_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStakeHolderEntitiesByIssueId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/GetStakeHolderEntitiesByIssueId" message="tns:IssueService_GetStakeHolderEntitiesByIssueId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/GetStakeHolderEntitiesByIssueIdResponse" message="tns:IssueService_GetStakeHolderEntitiesByIssueId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/GetStakeHolderEntitiesByIssueIdIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_GetStakeHolderEntitiesByIssueId_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTeamFinderLink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/GetTeamFinderLink" message="tns:IssueService_GetTeamFinderLink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/GetTeamFinderLinkResponse" message="tns:IssueService_GetTeamFinderLink_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/GetTeamFinderLinkIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_GetTeamFinderLink_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIssueByExternalReferenceIssueId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueByExternalReferenceIssueId" message="tns:IssueService_GetIssueByExternalReferenceIssueId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueByExternalReferenceIssueIdResponse" message="tns:IssueService_GetIssueByExternalReferenceIssueId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/GetIssueByExternalReferenceIssueIdIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_GetIssueByExternalReferenceIssueId_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIssueByAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateIssueByAction" message="tns:IssueService_UpdateIssueByAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateIssueByActionResponse" message="tns:IssueService_UpdateIssueByAction_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateIssueByActionIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_UpdateIssueByAction_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIssueByActionDirect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateIssueByActionDirect" message="tns:IssueService_UpdateIssueByActionDirect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateIssueByActionDirectResponse" message="tns:IssueService_UpdateIssueByActionDirect_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateIssueByActionDirectIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_UpdateIssueByActionDirect_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDeliveryDirect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/SubmitDeliveryDirect" message="tns:IssueService_SubmitDeliveryDirect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/SubmitDeliveryDirectResponse" message="tns:IssueService_SubmitDeliveryDirect_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/SubmitDeliveryDirectIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_SubmitDeliveryDirect_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeliveryDirect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateDeliveryDirect" message="tns:IssueService_UpdateDeliveryDirect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateDeliveryDirectResponse" message="tns:IssueService_UpdateDeliveryDirect_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/UpdateDeliveryDirectIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_UpdateDeliveryDirect_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloneDupInfoToMasterIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/CloneDupInfoToMasterIssue" message="tns:IssueService_CloneDupInfoToMasterIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/CloneDupInfoToMasterIssueResponse" message="tns:IssueService_CloneDupInfoToMasterIssue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/CloneDupInfoToMasterIssueIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_CloneDupInfoToMasterIssue_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyDupSHToMasterIssue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/ModifyDupSHToMasterIssue" message="tns:IssueService_ModifyDupSHToMasterIssue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/ModifyDupSHToMasterIssueResponse" message="tns:IssueService_ModifyDupSHToMasterIssue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IssueService/IssueService/ModifyDupSHToMasterIssueIMSeGeneralFaultArgumentsFault" name="IMSeGeneralFaultArgumentsFault" message="tns:IssueService_ModifyDupSHToMasterIssue_IMSeGeneralFaultArgumentsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueSetPrioFlag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IssueService/IssueService/IssueSetPrioFlag" message="tns:IssueService_IssueSetPrioFlag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IssueService/IssueService/IssueSetPrioFlagResponse" message="tns:IssueService_IssueSetPrioFlag_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

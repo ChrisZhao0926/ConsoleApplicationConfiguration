@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SEMC.IMSe.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="Enums.DMSDataDetailLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Id" />
+      <xs:enumeration value="Brief" />
+      <xs:enumeration value="Deep" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.DMSDataDetailLevel" nillable="true" type="tns:Enums.DMSDataDetailLevel" />
+  <xs:simpleType name="Enums.ItemType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Issue" />
+      <xs:enumeration value="Ca" />
+      <xs:enumeration value="Project" />
+      <xs:enumeration value="Discipline" />
+      <xs:enumeration value="Component" />
+      <xs:enumeration value="Customer" />
+      <xs:enumeration value="Product" />
+      <xs:enumeration value="GeneralType" />
+      <xs:enumeration value="Cda" />
+      <xs:enumeration value="Sw" />
+      <xs:enumeration value="Hw" />
+      <xs:enumeration value="User" />
+      <xs:enumeration value="CustomerCountry" />
+      <xs:enumeration value="CustomerGroup" />
+      <xs:enumeration value="DescriptionTemplate" />
+      <xs:enumeration value="CaLog" />
+      <xs:enumeration value="CaDialogLog" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.ItemType" nillable="true" type="tns:Enums.ItemType" />
+  <xs:simpleType name="Enums.IssueFields">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NoteEntry" />
+          <xs:enumeration value="UnDupFrom" />
+          <xs:enumeration value="ShiroyagiJira">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="Enums.IssueFields" nillable="true" type="tns:Enums.IssueFields" />
+</xs:schema>

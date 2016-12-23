@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a74e6e73-ed6e-4be6-b995-484adb06ba60" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://seldmsw107.corpusers.net:81/IMSerest/IssueService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IssueService.xsd" MetadataType="Schema" ID="f8ccd444-896b-4ca0-932e-8ba014daf75b" SourceId="1" SourceUrl="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd1" />
+    <MetadataFile FileName="IssueService1.xsd" MetadataType="Schema" ID="058b84d9-f8ca-4b7d-b881-17a00c44fb49" SourceId="1" SourceUrl="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd0" />
+    <MetadataFile FileName="IssueService.wsdl" MetadataType="Wsdl" ID="3640a5bd-dca6-481c-8e3d-04430b9f1e5a" SourceId="1" SourceUrl="http://seldmsw107.corpusers.net:81/IMSerest/IssueService.svc?wsdl" />
+    <MetadataFile FileName="IssueService2.xsd" MetadataType="Schema" ID="81d31ceb-ae76-4e4f-966f-a7c1732ac372" SourceId="1" SourceUrl="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd4" />
+    <MetadataFile FileName="IssueService1.wsdl" MetadataType="Wsdl" ID="dd8f3e07-3e1d-40d1-9eac-a600873b84ed" SourceId="1" SourceUrl="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="IssueService3.xsd" MetadataType="Schema" ID="3f740237-235c-40ea-9704-4d306db97666" SourceId="1" SourceUrl="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd3" />
+    <MetadataFile FileName="IssueService4.xsd" MetadataType="Schema" ID="1f53c43d-9556-4a54-89a3-0824b8945a66" SourceId="1" SourceUrl="http://seldmsw107.corpusers.net:81/IMSeREST/IssueService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

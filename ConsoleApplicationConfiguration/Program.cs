@@ -48,7 +48,7 @@ namespace ConsoleApplicationConfiguration
             //Console.ReadKey();
             //System.Configuration.ConfigurationManager.RefreshSection("appSettings");
             IssueServiceClient obj = new IssueServiceClient();
-            var aaa = obj.GetIssueForShiroyagiJira(DMSAPI_USER, DMSAPI_PASSWORD, "", "Convergence Jira", "").First();
+            var aaa = obj.GetIssueForShiroyagiJira(DMSAPI_USER, DMSAPI_PASSWORD, "", "Convergence Jira", "");
             Console.ReadKey();
         }
     }

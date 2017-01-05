@@ -10,8 +10,18 @@ namespace ConsoleApplicationConfiguration
 {
     class Program
     {
+        public static int DateDiff_Days(DateTime dt1, DateTime dt2)
+        {
+            TimeSpan TS1 = new TimeSpan(dt1.Ticks);
+            TimeSpan TS2 = new TimeSpan(dt2.Ticks);
+            TimeSpan TS3 = TS1.Subtract(TS2);
+            return TS3.Days;
+        }
         static void Main(string[] args)
         {
+            DateTime dt1 = DateTime.Now;
+            DateTime dt2 = DateTime.Now.AddDays(-2);
+            int a = DateDiff_Days(dt2, dt1);
             //string a=Console.ReadLine();
             //switch (a)
             //{

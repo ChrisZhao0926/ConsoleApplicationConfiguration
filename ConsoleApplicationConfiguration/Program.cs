@@ -19,9 +19,16 @@ namespace ConsoleApplicationConfiguration
         }
         static void Main(string[] args)
         {
-            DateTime dt1 = DateTime.Now;
-            DateTime dt2 = DateTime.Now.AddDays(-2);
-            int a = DateDiff_Days(dt2, dt1);
+            DateTime dt1 = DateTime.Parse("1/4/2017 1:49:37 PM");
+            DateTime dt2 = DateTime.Parse("1/3/2017 4:07:38 AM");
+            if (DateDiff_Days(dt2, dt1) < 0)
+            {
+
+            }
+            else
+            {
+ 
+            }
             //string a=Console.ReadLine();
             //switch (a)
             //{
